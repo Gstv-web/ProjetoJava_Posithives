@@ -37,23 +37,23 @@ public class ProjetoPosithives {
 		System.out.println("");
 		System.out.println("Seja bem vindo ao Posithives!");
 				
-		char opcao;
+		String opcao;
 		int idade;
 		boolean pausa = true;
 				
 		System.out.print("Você possui HIV? \n\n1) Sim\n2) Não\n3) Não sei\nDigite sua opção: ");
 		while(pausa) {		
-			opcao = input.next().charAt(0);
-			if(opcao == '1') {
+			opcao = input.next();
+			if("1".equals(opcao)) {
 				System.out.println("");
 				System.out.print("Você já está em tratamento? \n1) Sim\n2) Não\nDigite sua opção: ");
 				while(pausa) {
-					opcao = input.next().charAt(0);
-					if(opcao == '1') {
+					opcao = input.next();
+					if("1".equals(opcao)) {
 						System.out.println("");
 						System.out.print("Você já tomou seu remédio hoje?\n1) Sim\n2) Não\nDigite sua opção: ");
-						opcao = input.next().charAt(0);
-						if(opcao == '1') {
+						opcao = input.next();
+						if("1".equals(opcao)) {
 							System.out.println("");
 							System.out.println("|--------------------------|");
 							System.out.println("|--DIÁRIO DE MEDICAMENTOS--|");
@@ -61,7 +61,7 @@ public class ProjetoPosithives {
 							System.out.println("");
 							int count = 1; // Contador
 							String[] months = {"Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"};
-							System.err.println(months[selectMonth]+"-"+selectedYear);
+							System.out.println(months[selectMonth]+"-"+selectedYear);
 							System.out.println();
 							System.out.println("D   S   T   Q   Q   S   S  ");
 							for(int i = 1; i <= totalWeeks; i++) {
@@ -86,7 +86,7 @@ public class ProjetoPosithives {
 								}
 							pausa = false;
 						}
-						else if(opcao == '2') {
+						else if("2".equals(opcao)) {
 							System.out.println("");
 							System.out.println("|--------------------------|");
 							System.out.println("|--DIÁRIO DE MEDICAMENTOS--|");
@@ -94,7 +94,7 @@ public class ProjetoPosithives {
 							System.out.println("");
 							int count = 1; // Contador de dias
 							String[] months = {"Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"};
-							System.err.println(months[selectMonth]+"-"+selectedYear);
+							System.out.println(months[selectMonth]+"-"+selectedYear);
 							System.out.println();
 							System.out.println("S   T   Q   Q   S   S   D  ");
 							for(int i = 1; i <= totalWeeks; i++) {
@@ -123,7 +123,7 @@ public class ProjetoPosithives {
 							System.out.print("ERRO -- Digite apenas as opções 1 ou 2:  ");
 						}
 					}
-					else if(opcao == '2') {
+					else if("2".equals(opcao)) {
 						System.out.println("");
 						System.out.print(" ____________________________________________________________________________\n");
 						System.out.println("|                                                                            |");
@@ -138,12 +138,12 @@ public class ProjetoPosithives {
 					}	
 				}
 			}
-			else if(opcao == '2') {
+			else if("2".equals(opcao)) {
 				System.out.println("");
 				System.out.print("Gostaria de participar do estudo sobre vacina contra o HIV?\n1) Sim\n2) Não\nDigite sua opção: ");
 				while(pausa) {
-					opcao = input.next().charAt(0);
-					if(opcao == '1') {
+					opcao = input.next();
+					if("1".equals(opcao)) {
 						System.out.println("");
 						System.out.print("Digite a sua idade: ");
 						idade = input.nextInt();
@@ -151,18 +151,18 @@ public class ProjetoPosithives {
 							System.out.println("");
 							System.out.print("Está em boas condições de saúde?\n1) Sim\n2) Não\nDigite sua opição: ");
 							while(pausa) {
-								opcao = input.next().charAt(0);
-								if(opcao == '1') {
+								opcao = input.next();
+								if("1".equals(opcao)) {
 									System.out.println("");
 									System.out.print("Você utiliza PrEP?\n1) Sim\n2) Não\nDigite sua opção: ");
 									while(pausa) {
-										opcao = input.next().charAt(0);
-										if(opcao == '1') {
+										opcao = input.next();
+										if("1".equals(opcao)) {
 											System.out.println("");
 											System.out.println("Você não possui os critérios elegíveis. O programa será encerrado.");
 											pausa = false;
 										}
-										else if(opcao == '2') {
+										else if("2".equals(opcao)) {
 											System.out.println(" __________________________________________________________________");
 											System.out.println("|                                                                  |");
 											System.out.println("| PreP - A Profilaxia Pré-Exposição de risco à infecção pelo HIV - |\n| "
@@ -181,7 +181,7 @@ public class ProjetoPosithives {
 									}
 									
 								}
-								else if(opcao == '2') {
+								else if("2".equals(opcao)) {
 									System.out.println("Você não possui os critérios elegíveis. O programa será encerrado.");
 									pausa = false;
 								}
@@ -195,7 +195,7 @@ public class ProjetoPosithives {
 							pausa = false;
 						}
 					}
-					else if(opcao == '2') {
+					else if("2".equals(opcao)) {
 						System.out.println("");
 						System.out.println("Continue se prevenindo!");
 						pausa = false;
@@ -206,7 +206,7 @@ public class ProjetoPosithives {
 				}
 				
 			}
-			else if(opcao == '3') {
+			else if("3".equals(opcao)) {
 				System.out.println("");
 				System.out.print(" ____________________________________________________________________________\n");
 				System.out.println("|                                                                            |");
