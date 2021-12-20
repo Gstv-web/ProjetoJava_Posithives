@@ -41,43 +41,43 @@ public class ProjetoPosithives {
 		int idade;
 		boolean pausa = true;
 				
-		System.out.print("VocÍ possui HIV? \n\n1) Sim\n2) N„o\n3) N„o sei\nDigite sua opÁ„o: ");
+		System.out.print("Voc√™ possui HIV? \n\n1) Sim\n2) N√£o\n3) N√£o sei\nDigite sua op√ß√£o: ");
 		while(pausa) {		
 			opcao = input.next().charAt(0);
 			if(opcao == '1') {
 				System.out.println("");
-				System.out.print("VocÍ j· est· em tratamento? \n1) Sim\n2) N„o\nDigite sua opÁ„o: ");
+				System.out.print("Voc√™ j√° est√° em tratamento? \n1) Sim\n2) N√£o\nDigite sua op√ß√£o: ");
 				while(pausa) {
 					opcao = input.next().charAt(0);
 					if(opcao == '1') {
 						System.out.println("");
-						System.out.print("VocÍ j· tomou seu remÈdio hoje?\n1) Sim\n2) N„o\nDigite sua opÁ„o: ");
+						System.out.print("Voc√™ j√° tomou seu rem√©dio hoje?\n1) Sim\n2) N√£o\nDigite sua op√ß√£o: ");
 						opcao = input.next().charAt(0);
 						if(opcao == '1') {
 							System.out.println("");
 							System.out.println("|--------------------------|");
-							System.out.println("|--DI¡RIO DE MEDICAMENTOS--|");
+							System.out.println("|--DI√ÅRIO DE MEDICAMENTOS--|");
 							System.out.println("|--------------------------|");
 							System.out.println("");
-							int count = 1; // Contador de dias
+							int count = 1; // Contador
 							String[] months = {"Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"};
 							System.err.println(months[selectMonth]+"-"+selectedYear);
 							System.out.println();
 							System.out.println("D   S   T   Q   Q   S   S  ");
 							for(int i = 1; i <= totalWeeks; i++) {
-								System.out.println(); // prÛxima linha
-								for(int j = 1; j <= 7; j++ ) { // Mostra "__" enquanto o primeiro dia do mÍs n„o inicia (comparar com calend·rio do sistema) 
+								System.out.println(); // prÔøΩxima linha
+								for(int j = 1; j <= 7; j++ ) { // Mostra "__" enquanto o primeiro dia do mÔøΩs nÔøΩo inicia (comparar com calendÔøΩrio do sistema) 
 									if(count < startInWeek || (count - startInWeek + 1) > 31) {
 										System.out.print("__");
 										System.out.print("  ");
 									}
-									else {
+									else { 
 										if(cDay == count - startInWeek + 1 && cMonth == selectMonth && cYear == selectedYear) {
 											System.out.print(getDay(count - startInWeek + 1) + "*");  // mostra a data de hoje indicado com *
 											System.out.print(" ");
 										}
 										else {
-											System.out.print(getDay(count - startInWeek + 1));  // mostra a data de hoje indicado com *
+											System.out.print(getDay(count - startInWeek + 1));  // mostra a data de hoje
 											System.out.print("  ");
 											}
 										}
@@ -89,17 +89,17 @@ public class ProjetoPosithives {
 						else if(opcao == '2') {
 							System.out.println("");
 							System.out.println("|--------------------------|");
-							System.out.println("|--DI¡RIO DE MEDICAMENTOS--|");
+							System.out.println("|--DI√ÅRIO DE MEDICAMENTOS--|");
 							System.out.println("|--------------------------|");
 							System.out.println("");
 							int count = 1; // Contador de dias
 							String[] months = {"Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"};
 							System.err.println(months[selectMonth]+"-"+selectedYear);
 							System.out.println();
-							System.out.println("D   S   T   Q   Q   S   S  ");
+							System.out.println("S   T   Q   Q   S   S   D  ");
 							for(int i = 1; i <= totalWeeks; i++) {
-								System.out.println(); // prÛxima linha
-								for(int j = 1; j <= 7; j++ ) { // Mostra "__" enquanto o primeiro dia do mÍs n„o inicia (comparar com calend·rio do sistema) 
+								System.out.println(); // prÔøΩxima linha
+								for(int j = 1; j <= 7; j++ ) { // Mostra "__" enquanto o primeiro dia do mÔøΩs nÔøΩo inicia (comparar com calendÔøΩrio do sistema) 
 									if(count < startInWeek || (count - startInWeek + 1) > 31) {
 										System.out.print("__");
 										System.out.print("  ");
@@ -107,10 +107,10 @@ public class ProjetoPosithives {
 									else {
 										if(cDay == count - startInWeek + 1 && cMonth == selectMonth && cYear == selectedYear) {
 											System.out.print(getDay(count - startInWeek + 1));  // mostra a data de hoje indicado com *
-											System.out.print(" ");
+											System.out.print("  ");
 										}
 										else {
-											System.out.print(getDay(count - startInWeek + 1));  // mostra a data de hoje indicado com *
+											System.out.print(getDay(count - startInWeek + 1));  // mostra a data de hoje
 											System.out.print("  ");
 											}
 										}
@@ -120,27 +120,27 @@ public class ProjetoPosithives {
 							pausa = false;
 						}
 						else {
-							System.out.print("ERRO -- Digite apenas as opÁıes 1 ou 2:  ");
+							System.out.print("ERRO -- Digite apenas as op√ß√µes 1 ou 2:  ");
 						}
 					}
 					else if(opcao == '2') {
 						System.out.println("");
 						System.out.print(" ____________________________________________________________________________\n");
 						System.out.println("|                                                                            |");
-						System.out.print("|**Procure um CTA para mais informaÁıes.**                                   |\n");
-						System.out.print("|Digite seu CEP para localizar o CTA mais prÛximo de sua residÍncia:         |");
+						System.out.print("|**Procure um CTA para mais informa√ß√µes.**                                   |\n");
+						System.out.print("|Digite seu CEP para localizar o CTA mais pr√≥ximo de sua resid√™ncia:         |");
 						System.out.print("\n|____________________________________________________________________________|\n");
 						pausa = false;
 						// input para cep (tentar API)
 					}
 					else {
-						System.out.print("ERRO -- Digite apenas as opÁıes 1 ou 2:  ");
+						System.out.print("ERRO -- Digite apenas as op√ß√µes 1 ou 2:  ");
 					}	
 				}
 			}
 			else if(opcao == '2') {
 				System.out.println("");
-				System.out.print("Gostaria de participar do estudo sobre vacina contra o HIV?\n1) Sim\n2) N„o\nDigite sua opÁ„o: ");
+				System.out.print("Gostaria de participar do estudo sobre vacina contra o HIV?\n1) Sim\n2) N√£o\nDigite sua op√ß√£o: ");
 				while(pausa) {
 					opcao = input.next().charAt(0);
 					if(opcao == '1') {
@@ -149,49 +149,49 @@ public class ProjetoPosithives {
 						idade = input.nextInt();
 						if(idade >= 18 && idade <= 60) {
 							System.out.println("");
-							System.out.print("Est· em boas condiÁıes de sa˙de?\n1) Sim\n2) N„o\nDigite sua opÁ„o: ");
+							System.out.print("Est√° em boas condi√ß√µes de sa√∫de?\n1) Sim\n2) N√£o\nDigite sua opi√ß√£o: ");
 							while(pausa) {
 								opcao = input.next().charAt(0);
 								if(opcao == '1') {
 									System.out.println("");
-									System.out.print("VocÍ utiliza PrEP?\n1) Sim\n2) N„o\nDigite sua opÁ„o: ");
+									System.out.print("Voc√™ utiliza PrEP?\n1) Sim\n2) N√£o\nDigite sua op√ß√£o: ");
 									while(pausa) {
 										opcao = input.next().charAt(0);
 										if(opcao == '1') {
 											System.out.println("");
-											System.out.println("VocÍ n„o possui os critÈrios elegÌveis. O programa ser· encerrado.");
+											System.out.println("Voc√™ n√£o possui os crit√©rios eleg√≠veis. O programa ser√° encerrado.");
 											pausa = false;
 										}
 										else if(opcao == '2') {
 											System.out.println(" __________________________________________________________________");
 											System.out.println("|                                                                  |");
-											System.out.println("| PreP - A Profilaxia PrÈ-ExposiÁ„o de risco ‡ infecÁ„o pelo HIV - |\n| "
+											System.out.println("| PreP - A Profilaxia Pr√©-Exposi√ß√£o de risco √† infec√ß√£o pelo HIV - |\n| "
 																+ "consiste no uso preventivo de medicamentos antirretrovirais      |\n|"
-																+ " antes da exposiÁ„o sexual ao vÌrus para reduzir a probabilidade  |\n"
-																+ "| de infecÁ„o pelo HIV. O objetivo da PreP È previnir a infecÁ„o   |\n"
-																+ "| pelo HIV e promover uma vida sexual mais saud·vel.               |");
+																+ " antes da exposi√ß√£o sexual ao v√≠rus para reduzir a probabilidade  |\n"
+																+ "| de infec√ß√£o pelo HIV. O objetivo da PreP √© previnir a infec√ß√£o   |\n"
+																+ "| pelo HIV e promover uma vida sexual mais saud√°vel.               |");
 											System.out.println("|                                                                  |");
-											System.out.println("| Para mais informaÁıes acesse o site: www.aids.gov.br             |");
+											System.out.println("| Para mais informa√ß√µes acesse o site: www.aids.gov.br             |");
 											System.out.println("|__________________________________________________________________|");
 											pausa = false;
 										}
 										else {
-											System.out.println("ERRO -- Digite apenas as opÁıes 1 ou 2:  ");
+											System.out.println("ERRO -- Digite apenas as op√ß√µes 1 ou 2:  ");
 										}
 									}
 									
 								}
 								else if(opcao == '2') {
-									System.out.println("VocÍ n„o possui os critÈrios elegÌveis. O programa ser· encerrado.");
+									System.out.println("Voc√™ n√£o possui os crit√©rios eleg√≠veis. O programa ser√° encerrado.");
 									pausa = false;
 								}
 								else {
-									System.out.println("ERRO -- Digite apenas as opÁıes 1 ou 2:  ");
+									System.out.println("ERRO -- Digite apenas as op√ß√µes 1 ou 2:  ");
 								}
 							}
 						}
 						else {
-							System.out.println("VocÍ n„o possui os critÈrios elegÌveis. O programa ser· encerrado.");
+							System.out.println("Voc√™ n√£o possui os crit√©rios eleg√≠veis. O programa ser√° encerrado.");
 							pausa = false;
 						}
 					}
@@ -201,7 +201,7 @@ public class ProjetoPosithives {
 						pausa = false;
 					}
 					else {
-						System.out.print("ERRO -- Digite apenas as opÁıes 1 ou 2:  ");
+						System.out.print("ERRO -- Digite apenas as op√ß√µes 1 ou 2:  ");
 					}
 				}
 				
@@ -210,14 +210,14 @@ public class ProjetoPosithives {
 				System.out.println("");
 				System.out.print(" ____________________________________________________________________________\n");
 				System.out.println("|                                                                            |");
-				System.out.print("|**Procure um CTA para mais informaÁıes.**                                   |\n");
-				System.out.print("|Digite seu CEP para localizar o CTA mais prÛximo de sua residÍncia:         |");
+				System.out.print("|**Procure um CTA para mais informa√ß√µes.**                                   |\n");
+				System.out.print("|Digite seu CEP para localizar o CTA mais pr√≥ximo de sua resid√™ncia:         |");
 				System.out.print("\n|____________________________________________________________________________|\n");
 				pausa = false;
 				//input para cep (tentar API)
 			}
 			else {
-				System.out.print("ERRO -- Digite apenas as opÁıes de 1 a 3:  ");
+				System.out.print("ERRO -- Digite apenas as op√ß√µes de 1 a 3:  ");
 			}
 		}
 				
@@ -234,8 +234,8 @@ public class ProjetoPosithives {
 			return sDate;
 		}
 		return sDate;
+
 	}
 	
 }
-
 
