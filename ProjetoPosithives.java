@@ -59,7 +59,7 @@ public class ProjetoPosithives {
 							System.out.println("|--DIÁRIO DE MEDICAMENTOS--|");
 							System.out.println("|--------------------------|");
 							System.out.println("");
-							int count = 1; // Contador
+							int count = 1; // Contador de dias
 							String[] months = {"Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"};
 							System.err.println(months[selectMonth]+"-"+selectedYear);
 							System.out.println();
@@ -71,13 +71,13 @@ public class ProjetoPosithives {
 										System.out.print("__");
 										System.out.print("  ");
 									}
-									else { 
+									else {
 										if(cDay == count - startInWeek + 1 && cMonth == selectMonth && cYear == selectedYear) {
 											System.out.print(getDay(count - startInWeek + 1) + "*");  // mostra a data de hoje indicado com *
 											System.out.print(" ");
 										}
 										else {
-											System.out.print(getDay(count - startInWeek + 1));  // mostra a data de hoje
+											System.out.print(getDay(count - startInWeek + 1));  // mostra a data de hoje indicado com *
 											System.out.print("  ");
 											}
 										}
@@ -96,7 +96,7 @@ public class ProjetoPosithives {
 							String[] months = {"Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"};
 							System.err.println(months[selectMonth]+"-"+selectedYear);
 							System.out.println();
-							System.out.println("S   T   Q   Q   S   S   D  ");
+							System.out.println("D   S   T   Q   Q   S   S  ");
 							for(int i = 1; i <= totalWeeks; i++) {
 								System.out.println(); // próxima linha
 								for(int j = 1; j <= 7; j++ ) { // Mostra "__" enquanto o primeiro dia do mês não inicia (comparar com calendário do sistema) 
@@ -107,10 +107,10 @@ public class ProjetoPosithives {
 									else {
 										if(cDay == count - startInWeek + 1 && cMonth == selectMonth && cYear == selectedYear) {
 											System.out.print(getDay(count - startInWeek + 1));  // mostra a data de hoje indicado com *
-											System.out.print("  ");
+											System.out.print(" ");
 										}
 										else {
-											System.out.print(getDay(count - startInWeek + 1));  // mostra a data de hoje
+											System.out.print(getDay(count - startInWeek + 1));  // mostra a data de hoje indicado com *
 											System.out.print("  ");
 											}
 										}
@@ -234,7 +234,6 @@ public class ProjetoPosithives {
 			return sDate;
 		}
 		return sDate;
-
 	}
 	
 }
